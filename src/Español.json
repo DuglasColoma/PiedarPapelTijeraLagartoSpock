@@ -1,0 +1,9 @@
+{
+    "rock":"Piedra",
+    "paper":"Papel",
+    "scissors":"Tijera",
+    "lizard":"Lagarto",
+    "spock":"Spock",
+    "error":"No se que estas buscando, pero aca no hay nada",
+    "back":"Perdon"
+}
