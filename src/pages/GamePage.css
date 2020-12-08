@@ -7,11 +7,17 @@
 }
 
 .container{
-    padding-top: 10px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: grid;
+    justify-content: center;
+    justify-self: center;
 }
 
 .titulo{
+    color: rgb(26, 26, 29);
     margin-top: 2%;
     font-size: 50px;
     justify-content: center;
@@ -19,6 +25,7 @@
 }
 
 .game-titulo{
+    color: rgb(34, 34, 42);
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 50px;
@@ -26,9 +33,53 @@
     justify-self: center;
 }
 
+.sub-titulo{
+    color: rgb(34, 34, 42);
+    padding: 1%;
+    justify-content: center;
+    justify-self: center;
+    font-size: 24px;
+}
+
 .subcontainer{
     justify-content: center;
     justify-self: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    
+}
+
+.results-container{
+    background-color: #e2e5f3;
+    border-radius: 0.3rem;
+    box-shadow: #0000;
+    justify-content: center;
+    justify-self: center;
+
+}
+
+.end-game-msg{
+    justify-content: center;
+    justify-self: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.player-socre-container{
+    margin-left: 0.5rem;
+}
+
+.score{
+    padding: 1%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: #0000;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    justify-content: center;
+    justify-self: center;
+    background-color: #768ba8;
+    margin-bottom: 1.25rem;
 }
 
 .selection:hover{
@@ -47,4 +98,31 @@
     height: 25;
     bottom:1%;
     left: 1%;
+}
+
+.button-container{
+    display: block;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.button{
+    display: block;
+    justify-content: center;
+    background-color: #768ba8;
+    font-size: 1.2rem;
+    border-radius: 0.25rem;
+    border-color: rgb(36, 37, 41);
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.button:hover{
+    background-color: #7e838a;
+    color: rgba(255,255,255);
+    border-color: rgba(59, 130, 246);
 }
