@@ -1,0 +1,50 @@
+
+.selection{
+    padding: 10px;
+    cursor:pointer;
+    height: 120px;
+    width: 120px;
+}
+
+.container{
+    padding-top: 10px;
+    display: grid;
+}
+
+.titulo{
+    margin-top: 2%;
+    font-size: 50px;
+    justify-content: center;
+    justify-self: center;
+}
+
+.game-titulo{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 50px;
+    justify-content: center;
+    justify-self: center;
+}
+
+.subcontainer{
+    justify-content: center;
+    justify-self: center;
+}
+
+.selection:hover{
+  transform: scale(1.1);
+}
+
+.elecciones{
+  justify-content: space-around;
+  padding: 10%;
+}
+
+.return-container{
+    cursor:pointer;
+    position: fixed; 
+    width: 75;
+    height: 25;
+    bottom:1%;
+    left: 1%;
+}

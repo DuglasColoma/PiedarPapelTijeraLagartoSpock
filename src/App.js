@@ -2,22 +2,21 @@
 import React,{useState} from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import './App.css';
-import GamePage  from './Page/GamePage.js'
-import HomePage  from './Page/HomePage.js'
-import ErrorPage from './Page/ErrorPage.js'
+import './index.css';
+import GamePage  from './pages/GamePage.js'
+import HomePage  from './pages/HomePage.js'
+import ErrorPage from './pages/ErrorPage.js'
 
-class App extends React.Component{
-    render(){
-      return(
-        <BrowserRouter>
-            <Switch>
-                <Route path="/game" component = {GamePage }/>
-                <Route path="/"     component = {HomePage }/>
-                <Route path="*"     component = {ErrorPage}/>
-            </Switch>
-        </BrowserRouter>
-      );
-    }
+function App() {
+  return(
+    <BrowserRouter>
+      <Switch>
+        <Route path = "/game" component = {GamePage }/>
+        <Route path = "/"     component = {HomePage }/>
+        <Route path = "*"     component = {ErrorPage}/>
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;

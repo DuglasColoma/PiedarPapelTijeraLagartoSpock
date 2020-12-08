@@ -1,4 +1,5 @@
 import Lang from "./English.json"
+import State from './GameState.json';
 
 const GameLogic={
 
@@ -24,7 +25,7 @@ const GameLogic={
         switch(jugada2){
             case opcion1: {resultado = {winner: State.player1, choice: State.electionP1}} break
             case opcion2: {resultado = {winner: State.player1, choice: State.electionP1}} break
-            case jugada1: {resultado = {winner: "Tie", choice: State.electionP1        }} break
+            case jugada1: {resultado = {winner: "Tie",         choice: State.electionP1}} break
             default:      {resultado = {winner: State.player2, choice: State.electionP2}} break
         }
         return resultado
@@ -48,13 +49,4 @@ const GameLogic={
 
 function randomInt1to5() {
     return Math.floor(Math.random() * 5);
-}
-
-State = {
-    "player1": "",
-    "player2": "",
-    "electionP1": "",
-    "electionP2": "",
-    "score1": 0,
-    "score2": 0
 }
