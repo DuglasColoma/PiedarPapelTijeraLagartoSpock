@@ -6,7 +6,7 @@
     git clone https://github.com/DuglasColoma/unq-ui-duglas-coloma-trabajo-final.git
     
 ## ¿Cómo instalar el proyecto?
-  Moverse hacia la carpeta del proyecto (Trabajo Practico\PiedarPapelTijeraLagartoSpock) y desde esta instalar las depedencias usando el comando:
+  Moverse hacia la carpeta del proyecto y desde esta instalar las depedencias usando el comando:
   
     npm install
 
