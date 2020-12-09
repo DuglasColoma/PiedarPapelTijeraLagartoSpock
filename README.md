@@ -3,7 +3,7 @@
 ## ¿Cómo descargar el proyecto?
   Clonar este repositorio usando el comando:
   
-    git clone https://github.com/DuglasColoma/PiedarPapelTijeraLagartoSpock.git
+    git clone https://github.com/DuglasColoma/unq-ui-duglas-coloma-trabajo-final.git
     
 ## ¿Cómo instalar el proyecto?
   Moverse hacia la carpeta del proyecto (Trabajo Practico\PiedarPapelTijeraLagartoSpock) y desde esta instalar las depedencias usando el comando:
