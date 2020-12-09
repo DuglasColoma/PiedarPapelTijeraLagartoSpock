@@ -1,9 +1,0 @@
-{
-    "rock":"Rock",
-    "paper":"Paper",
-    "scissors":"Scissors",
-    "lizard":"Lizard",
-    "spock":"Spock",
-    "error":"I don't know what you are looking for, but there isn't anything here",
-    "back":"Sorry"
-}

@@ -1,14 +1,14 @@
 
-import State from '../GameState.json';
 import React,{useState, useEffect } from 'react';
 import { useLocation, useHistory  } from 'react-router-dom';
 
 import './GamePage.css'
-import rock  from '../images/piedra.png'
-import paper   from '../images/papel.png'
-import scissors  from '../images/tijera.png'
-import lizard from '../images/lagarto.png'
-import spock   from '../images/spock.png'
+import State    from '../GameState.json';
+import rock     from '../images/piedra.png'
+import paper    from '../images/papel.png'
+import scissors from '../images/tijera.png'
+import lizard   from '../images/lagarto.png'
+import spock    from '../images/spock.png'
 
 function GamePage(){
     
@@ -95,6 +95,7 @@ function GamePage(){
     
     const handleHomeClik = event=>{
         event.preventDefault();
+        resetScore() 
         history.push("/");
     }
 
@@ -112,7 +113,6 @@ function GamePage(){
         resetScore() 
         history.push("/");
     }
-
 
     const togglePlay= play =>{
         switch(turn) {
@@ -206,7 +206,7 @@ function GamePage(){
         return(
             <div>
                 {props.results.winner? 
-                <div className="end-game-msg">
+                <div className="subcontainer">
                     <span>
                         HA GANADO EL {props.results.winner} !!!!
                     </span><br/>
@@ -215,9 +215,14 @@ function GamePage(){
                     </span>
                 </div>
                 : 
-                <span className="end-game-msg font-bold text-xl">
-                    HA OCURRIDO UN EMPATE!
-                </span>
+                <div>
+                    <span className="subcontainer">
+                        HA OCURRIDO UN EMPATE!
+                    </span><br/>
+                    <span>
+                        Eligieron &ldquo;{props.results.choice}&ldquo;.
+                    </span>
+                </div>
                 }
             </div>
         ) 
@@ -227,24 +232,28 @@ function GamePage(){
         <div className="background-container">
             <div className="container">
                 <div className="game-titulo" >
-                    <p className="title-style">Piedra Papel Tijera Lagarto Spock</p>
+                    <p>Piedra Papel Tijera Lagarto Spock</p>
                 </div>
                 <div className="score">
-                    <span className="player-score-container">{getPlayer(1)} - {getScore(1)}</span> 
-                    <span>-</span>
-                    <span className="mr-2">{getScore(2)} - {getPlayer(2)}</span> 
+                    <div className="player-score-container">
+                        <span>{getPlayer(1)}<br/>{score1}</span>
+                    </div> 
+                    <div className="player-score-container">
+                        <span>{getPlayer(2)}<br/>{score2}</span>
+                    </div> 
                 </div>
                 <div className="results-container">
                 { !endgame ? (
-                <div>
+                <div className="button-container">
                     { playerTurn.length?
-                        <div className="end-game-msg">Turno del {playerTurn}</div>
+                        <div className="subcontainer">
+                            <span>Turno del {playerTurn}</span></div>
                         : <div></div>
                     }
                     <div className="px-12 py-8">
                         {computerTurn ? (
                             <div className="subcontainer">
-                                <span><p>La Computadora está pensando. Aguarde un momento por favor...</p></span> 
+                                <span><p>La Computadora está pensando. Espere por favor...</p></span> 
                             </div>
                         ) : (
                             <div className="subcontainer">
@@ -269,13 +278,13 @@ function GamePage(){
                         Jugar otra Ronda
                     </button>
                     <button className="button" onClick={() => handleClickRestart()}>
-                        Jugar una Partida de Cero
+                        Jugar una Nueva Partida
                     </button>
                 </div>
                 )}
                 </div>
                 <div className="return-container">
-                    <button type="button" onClick={handleHomeClik} className="btn btn-link register-footer">Regresar</button>
+                    <button type="button" onClick={handleHomeClik} className="button">Regresar</button>
                 </div>  
             </div>
         </div>

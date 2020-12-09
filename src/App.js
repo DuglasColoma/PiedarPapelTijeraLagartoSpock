@@ -5,15 +5,15 @@ import './App.css';
 import './index.css';
 import GamePage  from './pages/GamePage.js'
 import HomePage  from './pages/HomePage.js'
-import ErrorPage from './pages/ErrorPage.js'
+import HelpPage from './pages/HelpPage.js'
 
 function App() {
   return(
     <BrowserRouter>
       <Switch>
-        <Route path = "/game" component = {GamePage }/>
-        <Route path = "/"     component = {HomePage }/>
-        <Route path = "*"     component = {ErrorPage}/>
+        <Route path = "/game" component = {GamePage}/>
+        <Route path = "/help" component = {HelpPage}/>
+        <Route path = "/"     component = {HomePage}/>
       </Switch>
     </BrowserRouter>
   );
